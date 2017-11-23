@@ -30,8 +30,8 @@ export default class Email extends React.Component {
         return (
             <View>
                 <View>
-                    <Text>
-                        Email Adress:
+                    <Text style={{fontWeight: 'bold', color:"#3498db",fontSize:20}}>
+                        Email Address:
                     </Text>
                     <TextInput
                         onChangeText={(mail) => this.setState({mail})}
@@ -39,7 +39,7 @@ export default class Email extends React.Component {
                     />
                 </View>
                 <View>
-                    <Text>
+                    <Text style={{fontWeight: 'bold', color:"#3498db",fontSize:20}}>
                         Favourite teams:
                     </Text>
                     <TextInput

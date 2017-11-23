@@ -1,5 +1,5 @@
 import React from 'react';
-import{ View, ListView, TouchableOpacity, Text} from 'react-native';
+import{ View, ListView, TouchableOpacity, Text,StyleSheet} from 'react-native';
 
 export default class CustomListView extends React.Component {
 
@@ -16,8 +16,9 @@ export default class CustomListView extends React.Component {
     renderRow(item) {
         return (
             <TouchableOpacity onPress={() => this.edit(item)}>
-                <View>
-                    <Text>{item.name}</Text>
+                <View style={{alignItems:'center', marginTop:20}}>
+                    <Text style={{fontWeight: 'bold', color:"#3498db",fontSize:24}}>{item.name}</Text>
+                    <Text/>
                 </View>
             </TouchableOpacity>
         )
@@ -31,3 +32,13 @@ export default class CustomListView extends React.Component {
         );
     }
 }
+const styles = StyleSheet.create({
+    backround: {
+
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    buttonBackround: {
+        flex: 1
+    }
+});
